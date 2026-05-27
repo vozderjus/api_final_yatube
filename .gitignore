@@ -1,33 +1,4 @@
 ```
-# Configuration and test settings
-.pytest_cache/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Environment files
-.env
-.env.local
-*.env.*
-
-# Logs
-*.log
-
-# Coverage reports
-.coverage
-coverage/
-htmlcov/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# Build artifacts
-dist/
-build/
-target/
 ```
