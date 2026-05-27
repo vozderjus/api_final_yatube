@@ -16,7 +16,7 @@ SECRET_KEY = env(
 DEBUG = env('DEBUG', default='True') == 'True'
 
 ALLOWED_HOSTS = env(
-    'ALLOWED_HOSTS', default='localhost').split(', ')
+    'ALLOWED_HOSTS', default='localhost, testserver').split(', ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'rest_framework.authtoken',
     'djoser',
     'api',
     'posts',
@@ -107,7 +108,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
 }
 
